@@ -5,7 +5,6 @@ import Navbar from "./components/navbar";
 import Home from "./components/home";
 import About from "./components/about";
 import { Route, Routes } from "react-router-dom";
-import Signup from "./components/signup_v1";
 import SignIn from "./components/signin";
 import SignOut from "./components/signout";
 import SignupBiz from "./components/signup_biz";
@@ -15,6 +14,7 @@ import { ToastContainer } from "react-toastify";
 import CreateCard from "./components/cardCreate";
 import CardsDelete from "./components/cardsDelete";
 import CardUpdate from "./components/cardUpdate";
+import Signup from "./components/signup";
 
 function App() {
   return (
