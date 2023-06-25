@@ -2,7 +2,7 @@ import PageHeader from "./common/pageHeder";
 import Input from "./common/input";
 import { useFormik } from "formik";
 import Joi from "joi";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import formikValedateUsingJoi from "../utils/formikValidateUsingJoi";
 import { useAuth } from "./context/auth.context";
@@ -10,7 +10,7 @@ import { useAuth } from "./context/auth.context";
 const SignupBiz = ({ redirect = "/" }) => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const { login, createUser } = useAuth();
+  const { user, login, createUser } = useAuth();
 
   const form = useFormik({
     validateOnMount: true,
@@ -43,9 +43,9 @@ const SignupBiz = ({ redirect = "/" }) => {
       }
     },
   });
-  // if (user) {
-  //   return <Navigate to="/" />;
-  // }
+  if (user) {
+    return <Navigate to="/" />;
+  }
   return (
     <>
       <PageHeader

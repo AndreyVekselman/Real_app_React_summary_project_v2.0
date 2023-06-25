@@ -2,15 +2,15 @@ import PageHeader from "./common/pageHeder";
 import Input from "./common/input";
 import { useFormik } from "formik";
 import Joi from "joi";
-// import { createUser } from "../services/userService";
+import { createUser } from "../services/userService";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import formikValedateUsingJoi from "../utils/formikValidateUsingJoi";
 import { useAuth } from "./context/auth.context";
+import formikValedateUsingJoi from "../utils/formikValidateUsingJoi";
 const Signup = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const { user, createUser } = useAuth();
+  const { user } = useAuth();
 
   const form = useFormik({
     validateOnMount: true,
@@ -31,7 +31,7 @@ const Signup = () => {
 
     async onSubmit(values) {
       try {
-        createUser(values).then(console.log);
+        // createUser(values).then(console.log);
         await createUser({ ...values, biz: false });
         navigate("/sign-in");
       } catch ({ response }) {

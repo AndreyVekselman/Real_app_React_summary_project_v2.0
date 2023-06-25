@@ -48,7 +48,7 @@ const CardUpdate = () => {
           body.bizImage = bizImage;
         }
         await cardsService.updateCard(id, body);
-        toast.success("New Card created successefully", {
+        toast.success("Your card updated successefully", {
           position: "top-center",
           autoClose: 1500,
           hideProgressBar: false,
