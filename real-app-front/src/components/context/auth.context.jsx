@@ -2,12 +2,15 @@ import userService from "../../services/userService";
 import { createContext, useContext, useState } from "react";
 
 const fn_error_context_must_be_used = () => {
-  throw new Error("must use authContext provider");
+  throw new Error(
+    "must use authContext provider for consumer to work properly"
+  );
 };
 
 export const authContext = createContext({
   login: fn_error_context_must_be_used,
   logout: fn_error_context_must_be_used,
+  createUser: fn_error_context_must_be_used,
   user: null,
 });
 authContext.displayName = "auth";

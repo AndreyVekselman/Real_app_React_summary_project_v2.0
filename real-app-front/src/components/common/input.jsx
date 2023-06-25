@@ -3,12 +3,12 @@ const Input = ({ label, name, error, ...rest }) => {
     <div className="form-group my-1">
       <label htmlFor={name}>
         {label}
-        {rest.required && <span className="text-danger ms-1">*</span>}
+        {rest.required && <span className="text-danger"> *</span>}
       </label>
       <input
         {...rest}
-        id={name}
         name={name}
+        id={name}
         className={["form-control", error && "is-invalid"]
           .filter(Boolean)
           .join(" ")}
