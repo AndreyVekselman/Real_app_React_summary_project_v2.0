@@ -14,7 +14,7 @@ const CardUpdate = () => {
   const [error, setError] = useState("");
   const { id } = useParams();
   const card = useCard(id);
- 
+
   const form = useFormik({
     validateOnMount: true,
     initialValues: {
@@ -73,6 +73,7 @@ const CardUpdate = () => {
     const { bizName, bizAddress, bizDescription, bizPhone, bizImage } = card;
     form.setValues({ bizName, bizAddress, bizDescription, bizPhone, bizImage });
   }, [card]);
+
   return (
     <>
       <ToastContainer
