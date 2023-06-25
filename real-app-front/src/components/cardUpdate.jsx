@@ -14,14 +14,7 @@ const CardUpdate = () => {
   const [error, setError] = useState("");
   const { id } = useParams();
   const card = useCard(id);
-  console.log("id:", id);
-  console.log(card);
-  // console.log(card.bizName);
-  // useEffect(() => {
-  //   const cardUpdate = async () => {
-  //     await cardsService.updateCard(id, card);
-  //   };
-  // }, [id, navigate]);
+ 
   const form = useFormik({
     validateOnMount: true,
     initialValues: {
