@@ -43,7 +43,7 @@ const Navbar = () => {
             </li>
             {user?.biz && (
               <li className="nav-item">
-                <NavLink className="nav-link" to="/bizCards">
+                <NavLink className="nav-link" to="/mycards">
                   My Cards
                 </NavLink>
               </li>
@@ -92,7 +92,7 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/sign-up-biz">
+                  <NavLink className="nav-link" to="/sign-up_biz">
                     Sign Up Business
                   </NavLink>
                 </li>

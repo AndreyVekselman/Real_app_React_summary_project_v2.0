@@ -26,7 +26,7 @@ const Signup = () => {
         .required()
         .email({ tlds: { allow: false } }),
       password: Joi.string().min(6).max(1024).required(),
-      name: Joi.string().min(2).max(255).required(),
+      name: Joi.string().min(6).max(255).required(),
     }),
 
     async onSubmit(values) {
