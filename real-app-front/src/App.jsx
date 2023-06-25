@@ -15,6 +15,7 @@ import CreateCard from "./components/cardCreate";
 import CardsDelete from "./components/cardsDelete";
 import CardUpdate from "./components/cardUpdate";
 import Signup from "./components/signup";
+import CardShow from "./components/cardShow";
 
 function App() {
   return (
@@ -65,6 +66,14 @@ function App() {
             element={
               <ProtectedRoute onlyBiz>
                 <CardUpdate />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/mycards/show/:id"
+            element={
+              <ProtectedRoute onlyBiz>
+                <CardShow />
               </ProtectedRoute>
             }
           />
