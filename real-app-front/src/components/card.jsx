@@ -13,8 +13,10 @@ const Card = ({
           <li className="list-group-item">{bizPhone}</li>
           <li className="list-group-item">{bizAddress}</li>
         </ul>
-        <Link to={`/mycards/update/${_id}`}>Edit</Link>
-        <Link to={`/mycards/delete/${_id}`}>Del</Link>
+        <span><Link to={`/mycards/update/${_id}`}>Edit</Link></span>
+        {/* <Link to={`/mycards/update/${_id}`}>Edit</Link> */}
+        <span><Link to={`/mycards/delete/${_id}`}>Del</Link></span>
+        {/* <Link to={`/mycards/delete/${_id}`}>Del</Link> */}
       </div>
     </div>
   );
