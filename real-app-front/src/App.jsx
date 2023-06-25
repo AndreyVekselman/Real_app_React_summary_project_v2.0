@@ -18,7 +18,7 @@ import CardUpdate from "./components/cardUpdate";
 
 function App() {
   return (
-    <div className="app d-flex flex-column min-vh-100 ">
+    <div className="App d-flex flex-column min-vh-100  ">
       <ToastContainer />
       <header>
         <Navbar />
