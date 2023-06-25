@@ -31,7 +31,6 @@ const Signup = () => {
 
     async onSubmit(values) {
       try {
-        // createUser(values).then(console.log);
         await createUser({ ...values, biz: false });
         navigate("/sign-in");
       } catch ({ response }) {

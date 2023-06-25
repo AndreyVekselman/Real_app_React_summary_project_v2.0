@@ -10,10 +10,10 @@ const MyCards = () => {
     <>
       <PageHeader
         title={<>Real Business Cards</>}
-        description="Here shown my business cards"
+        description="Here shown a business cards"
       />
 
-      <div className="row">
+      <div className="row text-center fs-4 mb-4">
         <Link to="/create-card"> Create a new Card</Link>
       </div>
       <div className="row">
