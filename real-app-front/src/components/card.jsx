@@ -34,7 +34,11 @@ const Card = ({
             <h6 className="card-subtitle my-2 text-body-secondary text-center">
               Address:
             </h6>
-            <li className="list-group-item">{bizAddress}</li>
+            <li className="list-group-item">
+              <div style={{ height: "4.5rem", overflow: "hidden" }}>
+                {bizAddress}
+              </div>
+            </li>
           </ul>
           <div className="d-flex mt-2 fs-5">
             <div className="me-auto p-2">
