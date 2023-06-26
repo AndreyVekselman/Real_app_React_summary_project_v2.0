@@ -142,7 +142,7 @@ const CardUpdate = () => {
               Update Card
             </button>
           </div>
-          <div className="my-2">
+          <div className="my-2 me-2">
             <Link to="/mycards">
               <button
                 type="button"
