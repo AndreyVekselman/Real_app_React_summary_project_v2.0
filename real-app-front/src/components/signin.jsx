@@ -8,9 +8,9 @@ import formikValedateUsingJoi from "../utils/formikValidateUsingJoi";
 import { useAuth } from "./context/auth.context";
 
 const SignIn = ({ redirect = "/" }) => {
+  const { login, user } = useAuth();
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  const { login, user } = useAuth();
 
   const form = useFormik({
     validateOnMount: true,
@@ -18,6 +18,7 @@ const SignIn = ({ redirect = "/" }) => {
       email: "",
       password: "",
     },
+
     validate: formikValedateUsingJoi({
       email: Joi.string()
         .min(6)
@@ -29,7 +30,7 @@ const SignIn = ({ redirect = "/" }) => {
 
     async onSubmit(values) {
       try {
-        login(values);
+        await login(values);
         navigate(redirect);
       } catch ({ response }) {
         if (response && response.status === 400) {
@@ -53,6 +54,7 @@ const SignIn = ({ redirect = "/" }) => {
       />
       <form onSubmit={form.handleSubmit} noValidate>
         {error && <div className="alert alert-danger">{error}</div>}
+
         <Input
           {...form.getFieldProps("email")}
           type="email"
