@@ -82,7 +82,7 @@ const CreateCard = () => {
       <PageHeader
         title={
           <>
-            Create a new Business card with Real{" "}
+            Create a new Business card with a Real{" "}
             <i className="bi bi-boxes"> App</i>
           </>
         }
@@ -123,8 +123,8 @@ const CreateCard = () => {
           label="Image"
           error={form.touched.bizImage && form.errors.bizImage}
         />
-        <div className="d-flex justify-content-around">
-          <span className="my-2 me-5 px-5">
+        <div className="d-flex mb-3">
+          <div className="me-auto p-2">
             <button
               type="submit"
               disabled={!form.isValid}
@@ -132,18 +132,18 @@ const CreateCard = () => {
             >
               Create Card
             </button>
-          </span>
-          <span className="my-2 me-5 px-5">
+          </div>
+          <div className="my-2 ">
             <Link to="/mycards">
               <button
-                type="btn"
+                type="button"
                 className="btn btn-danger "
                 style={{ width: "7rem" }}
               >
                 Cancel
               </button>
             </Link>
-          </span>
+          </div>
         </div>
       </form>
     </>
