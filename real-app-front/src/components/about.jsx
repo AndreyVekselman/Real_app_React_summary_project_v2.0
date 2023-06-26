@@ -28,7 +28,7 @@ const About = () => {
           application copywriter. <br />
           The Header has a dynamic navigation menu that takes the user to the
           following pages: <b>Home</b>, <b>About</b>, login <b>Sign In</b>,
-          regular user registration <b>Sign UP</b>, business user registration{" "}
+          regular user registration <b>Sign Up</b>, business user registration{" "}
           <b>Sign Up Business</b>, a page that displays business cards{" "}
           <b>My Cards</b> and allows you to create, delete and edit them. Header
           also has an option to user logout <b>Sign Out</b> and a{" "}
@@ -36,7 +36,14 @@ const About = () => {
           The application has two types of registered users: ordinary and{" "}
           <b>business</b> . An ordinary user does not have any privileges and,
           like an unregistered user, has limited access to the application's
-          features.
+          features. <br />
+          To register in the application, the user needs to click on the{" "}
+          <b>Sign Up</b>
+          menu and then fill out a simple registration form: <b>Name</b>,{" "}
+          <b>Email</b> and <b>Password</b>. After filling in the required fields
+          in the registration form, the user must click on the <b>Sign Up</b>{" "}
+          button to confirm registration or on the <b>Cancel</b> button to
+          cancel.
         </>
       }
     />
