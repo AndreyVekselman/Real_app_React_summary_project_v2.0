@@ -80,8 +80,12 @@ const CreateCard = () => {
         theme="colored"
       />
       <PageHeader
-        title="Create a new Bussiness card"
-        description="Create a new Bussiness card with RealApp"
+        title={
+          <>
+            Create a new Business card with Real{" "}
+            <i className="bi bi-boxes"> App</i>
+          </>
+        }
       />
       <form onSubmit={form.handleSubmit} noValidate>
         {error && <div className="alert alert-danger">{error}</div>}

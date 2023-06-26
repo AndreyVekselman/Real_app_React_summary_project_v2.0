@@ -89,8 +89,12 @@ const CardUpdate = () => {
         theme="colored"
       />
       <PageHeader
-        title="Update your Bussiness card"
-        description="Update your Bussiness card with RealApp"
+        title={
+          <>
+            Update Your Business card with Real{" "}
+            <i className="bi bi-boxes"> App</i>
+          </>
+        }
       />
       <form onSubmit={form.handleSubmit} noValidate>
         {error && <div className="alert alert-danger">{error}</div>}
