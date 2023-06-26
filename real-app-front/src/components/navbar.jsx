@@ -19,7 +19,6 @@ const Navbar = () => {
     >
       {user ? (
         <div className=" text-bg-dark p-3">
-          {" "}
           Hello <i className="bi bi-person-check"></i>{" "}
         </div>
       ) : null}
