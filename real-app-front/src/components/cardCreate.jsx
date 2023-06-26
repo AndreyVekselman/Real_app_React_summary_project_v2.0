@@ -2,7 +2,7 @@ import PageHeader from "./common/pageHeder";
 import Input from "./common/input";
 import { useFormik } from "formik";
 import Joi from "joi";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import formikValedateUsingJoi from "../utils/formikValidateUsingJoi";
 import cardService from "../services/cardService";
@@ -123,14 +123,27 @@ const CreateCard = () => {
           label="Image"
           error={form.touched.bizImage && form.errors.bizImage}
         />
-        <div className="my-2">
-          <button
-            type="submit"
-            disabled={!form.isValid}
-            className="btn btn-primary"
-          >
-            Create Card
-          </button>
+        <div className="d-flex justify-content-around">
+          <span className="my-2 me-5 px-5">
+            <button
+              type="submit"
+              disabled={!form.isValid}
+              className="btn btn-primary"
+            >
+              Create Card
+            </button>
+          </span>
+          <span className="my-2 me-5 px-5">
+            <Link to="/mycards">
+              <button
+                type="btn"
+                className="btn btn-danger "
+                style={{ width: "7rem" }}
+              >
+                Cancel
+              </button>
+            </Link>
+          </span>
         </div>
       </form>
     </>
