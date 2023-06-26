@@ -26,38 +26,22 @@ const Card = ({
               Phone:
             </h6>
             <li className="list-group-item">{bizPhone}</li>
-            <h6 className="card-subtitle mb-2 text-body-secondary text-center">
+            <h6 className="card-subtitle my-2 text-body-secondary text-center">
               Address:
             </h6>
             <li className="list-group-item">{bizAddress}</li>
           </ul>
-          <div className="text-center fs-5">
-            <span className="mx-auto p-2">
+          <div className="d-flex mt-2 fs-5">
+            <div className="me-auto p-2">
               <Link to={`/mycards/update/${_id}`}>Edit</Link>
-            </span>
-            <span className=" mx-auto p-2 ">
+            </div>
+            <div className=" my-2 ">
               <Link to={`/mycards/delete/${_id}`}>Delete</Link>
-            </span>
+            </div>
           </div>
         </div>
       </div>
     </Link>
-
-    // <div className="card">
-    //   <img src={bizImage} className="card-img-top" alt={bizName} />
-    //   <div className="card-body">
-    //     <h5 className="card-title">{bizName}</h5>
-    //     <p className="card-text">{bizDescription}</p>
-    //     <ul className="list-group list-group-flush">
-    //       <li className="list-group-item">{bizPhone}</li>
-    //       <li className="list-group-item">{bizAddress}</li>
-    //     </ul>
-    //     <span><Link to={`/mycards/update/${_id}`}>Edit</Link></span>
-    //     {/* <Link to={`/mycards/update/${_id}`}>Edit</Link> */}
-    //     <span><Link to={`/mycards/delete/${_id}`}>Del</Link></span>
-    //     {/* <Link to={`/mycards/delete/${_id}`}>Del</Link> */}
-    //   </div>
-    // </div>
   );
 };
 
