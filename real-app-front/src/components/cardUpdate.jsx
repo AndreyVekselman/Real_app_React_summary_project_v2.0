@@ -1,6 +1,6 @@
 import Joi from "joi";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useCard } from "../hooks/useCard";
 import { useFormik } from "formik";
 import formikValedateUsingJoi from "../utils/formikValidateUsingJoi";
@@ -132,14 +132,27 @@ const CardUpdate = () => {
           label="Image"
           error={form.touched.bizImage && form.errors.bizImage}
         />
-        <div className="my-2">
-          <button
-            type="submit"
-            disabled={!form.isValid}
-            className="btn btn-primary"
-          >
-            Update Card
-          </button>
+        <div className="d-flex mb-3">
+          <div className="me-auto p-2">
+            <button
+              type="submit"
+              disabled={!form.isValid}
+              className="btn btn-primary"
+            >
+              Update Card
+            </button>
+          </div>
+          <div className="my-2">
+            <Link to="/mycards">
+              <button
+                type="button"
+                className="btn btn-danger"
+                style={{ width: "7.5rem" }}
+              >
+                Cancel
+              </button>
+            </Link>
+          </div>
         </div>
       </form>
     </>
