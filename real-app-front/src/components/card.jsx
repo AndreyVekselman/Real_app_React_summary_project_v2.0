@@ -17,11 +17,16 @@ const Card = ({
         />
         <div className="card-body">
           <h5 className="card-title">{bizName}</h5>
-          <h6 className="card-subtitle mb-2 text-body-secondary text-center">
-            Description:
-          </h6>
-          <p className="card-text">{bizDescription}</p>
-          <ul className="list-group list-group-flush">
+          <div
+            className="md-4"
+            style={{ height: "4.5rem", overflow: "hidden" }}
+          >
+            <h6 className="card-subtitle mb-2 text-body-secondary text-center">
+              Description:
+            </h6>
+            <p className="card-text">{bizDescription}</p>
+          </div>
+          <ul className="list-group list-group-flush mt-2">
             <h6 className="card-subtitle mb-2 text-body-secondary text-center">
               Phone:
             </h6>
