@@ -17,7 +17,12 @@ const Navbar = () => {
       className="navbar navbar-expand-md navbar-dark bg-dark  fs-5"
       aria-label="Fourth navbar example"
     >
-      {user ? <div className=" text-bg-dark p-3"> Hello User </div> : null}
+      {user ? (
+        <div className=" text-bg-dark p-3">
+          {" "}
+          Hello <i className="bi bi-person-check"></i>{" "}
+        </div>
+      ) : null}
       <div className="container">
         <Link className="navbar-brand" to="/">
           Real <i className="bi bi-boxes"> App</i>
