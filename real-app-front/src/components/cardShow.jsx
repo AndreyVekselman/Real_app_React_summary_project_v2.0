@@ -32,7 +32,7 @@ const CardShow = () => {
                   Phone:
                 </h6>
                 <li className="list-group-item">{card.bizPhone}</li>
-                <h6 className="card-subtitle mb-2 text-body-secondary text-center">
+                <h6 className="card-subtitle my-2 text-body-secondary text-center">
                   Address:
                 </h6>
                 <li className="list-group-item">{card.bizAddress}</li>
