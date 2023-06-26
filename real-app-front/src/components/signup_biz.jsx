@@ -2,7 +2,7 @@ import PageHeader from "./common/pageHeder";
 import Input from "./common/input";
 import { useFormik } from "formik";
 import Joi from "joi";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import formikValedateUsingJoi from "../utils/formikValidateUsingJoi";
 import { useAuth } from "./context/auth.context";
@@ -75,14 +75,27 @@ const SignupBiz = ({ redirect = "/" }) => {
           required
           error={form.touched.name && form.errors.name}
         />
-        <div className="my-2">
-          <button
-            type="submit"
-            disabled={!form.isValid}
-            className="btn btn-primary"
-          >
-            Sign Up Business
-          </button>
+        <div className="d-flex mb-3">
+          <div className="me-auto p-2">
+            <button
+              type="submit"
+              disabled={!form.isValid}
+              className="btn btn-primary"
+            >
+              Sign Up Business
+            </button>
+          </div>
+          <div className="my-2 me-2">
+            <Link to="/">
+              <button
+                type="button"
+                className="btn btn-danger"
+                style={{ width: "9rem" }}
+              >
+                Cancel
+              </button>
+            </Link>
+          </div>
         </div>
       </form>
     </>

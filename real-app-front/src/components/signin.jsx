@@ -79,7 +79,7 @@ const SignIn = ({ redirect = "/" }) => {
               Sign In
             </button>
           </div>
-          <div className="my-2">
+          <div className="my-2 me-2">
             <Link to="/">
               <button
                 type="button"
