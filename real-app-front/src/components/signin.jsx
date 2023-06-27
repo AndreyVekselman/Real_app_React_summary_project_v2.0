@@ -6,6 +6,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import formikValedateUsingJoi from "../utils/formikValidateUsingJoi";
 import { useAuth } from "./context/auth.context";
+import { toast } from "react-toastify";
 
 const SignIn = ({ redirect = "/" }) => {
   const { login, user } = useAuth();
@@ -35,6 +36,7 @@ const SignIn = ({ redirect = "/" }) => {
       } catch ({ response }) {
         if (response && response.status === 400) {
           setError(response.data);
+          toast.error(`${response.data}`);
         }
       }
     },

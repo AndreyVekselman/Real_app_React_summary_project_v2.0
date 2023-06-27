@@ -9,7 +9,7 @@ const PageHeader = ({ title, description }) => {
       {description ? (
         <div className="row mt-2">
           <div className="col-12 fs-4">
-            <p>{description}</p>
+            <div>{description}</div>
           </div>
         </div>
       ) : null}
