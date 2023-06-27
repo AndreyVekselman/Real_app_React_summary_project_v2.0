@@ -6,6 +6,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import formikValedateUsingJoi from "../utils/formikValidateUsingJoi";
 import { useAuth } from "./context/auth.context";
+import { toast } from "react-toastify";
 
 const SignupBiz = ({ redirect = "/" }) => {
   const [error, setError] = useState("");
@@ -39,6 +40,7 @@ const SignupBiz = ({ redirect = "/" }) => {
       } catch ({ response }) {
         if (response && response.status === 400) {
           setError(response.data);
+          toast.error(`${response.data}`);
         }
       }
     },
@@ -53,7 +55,7 @@ const SignupBiz = ({ redirect = "/" }) => {
         description="Sign Up Business"
       />
       <form onSubmit={form.handleSubmit} noValidate>
-        {error && <div className="alert alert-danger">{error}</div>}
+        {error && <div className="alert alert-danger mt-2">{error}</div>}
         <Input
           {...form.getFieldProps("email")}
           type="email"

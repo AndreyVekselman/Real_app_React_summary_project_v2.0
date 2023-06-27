@@ -7,6 +7,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "./context/auth.context";
 import formikValedateUsingJoi from "../utils/formikValidateUsingJoi";
+import { toast } from "react-toastify";
 const Signup = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ const Signup = () => {
       } catch ({ response }) {
         if (response && response.status === 400) {
           setError(response.data);
+          toast.error(`${response.data}`);
         }
       }
     },
