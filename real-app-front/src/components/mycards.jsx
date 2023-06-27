@@ -18,7 +18,10 @@ const MyCards = () => {
       </div>
       <div className="row">
         {!cards.length ? (
-          <p>no card</p>
+          <p className="fs-4">
+            No cards yet. Start using a Real <i className="bi bi-boxes"> App</i>
+            . Create your first business Card!
+          </p>
         ) : (
           cards.map((card) => (
             <div key={card._id} className="col">

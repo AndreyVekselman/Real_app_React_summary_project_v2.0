@@ -89,6 +89,20 @@ const About = () => {
           <b>My Cards</b> menu also appears. <br />
           <b>Light/Dark</b> mode switch is available to all users, even
           unregistered ones. <br />
+          By clicking on the <b>My Cards</b> menu, the business user is taken to
+          a page displaying the business cards they have created. If no business
+          card has been created yet, a blank page is displayed. <br /> By
+          clicking on the link <b>Create a New Card</b>, the business user is
+          transferred to the page for creating a business card, where it is
+          necessary to fill in the information required for the card:{" "}
+          <b>Name</b>, <b>Description</b>, <b>Address</b>, <b>Phone</b> number,
+          and a link to a <b>Image</b> if desired. <br />
+          <b>
+            <i className="bi bi-exclamation-octagon text-danger"></i>
+          </b>{" "}
+          The <b>Name</b>, <b>Description</b> and <b>Address</b> must contain at
+          least 2 characters. The <b>Phone</b> number must a valid phone number and contain 9 numbers. <br />
+          After filling in the required fields in the form for creating a business card, the user must click on the <b>Create Card</b> button to confirm the creation of a business card or on <b>Cancel</b> to cancel.
         </>
       }
     />
