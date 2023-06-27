@@ -111,6 +111,12 @@ const About = () => {
           <br />
           When the user clicks on the <b>Delete</b> button, the business card is
           removed from the catalog and from the <b>My Cards</b> page. <br />
+          When the user clicks on the <b>Edit</b> button, he goes to the
+          business card editing page. On this page, the user can change the data
+          of the card he has chosen: <b>Name</b>, <b>Description</b>,{" "}
+          <b>Address</b>, <b>Phone</b> and a link to a photo or picture. To save
+          the changes, the user needs to click on the <b>Update Card</b> button
+          or <b>Cancel</b> to cancel the changes.
         </>
       }
     />
