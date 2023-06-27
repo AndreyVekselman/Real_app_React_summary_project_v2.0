@@ -101,8 +101,16 @@ const About = () => {
             <i className="bi bi-exclamation-octagon text-danger"></i>
           </b>{" "}
           The <b>Name</b>, <b>Description</b> and <b>Address</b> must contain at
-          least 2 characters. The <b>Phone</b> number must a valid phone number and contain 9 numbers. <br />
-          After filling in the required fields in the form for creating a business card, the user must click on the <b>Create Card</b> button to confirm the creation of a business card or on <b>Cancel</b> to cancel.
+          least 2 characters. The <b>Phone</b> number must a valid phone number
+          and contain 9 numbers. <br />
+          After filling in the required fields in the form for creating a
+          business card, the user must click on the <b>Create Card</b> button to
+          confirm the creation of a business card or on <b>Cancel</b> to cancel.{" "}
+          <br />
+          Each business card has two buttons: <b>Edit</b> and <b>Delete</b>.{" "}
+          <br />
+          When the user clicks on the <b>Delete</b> button, the business card is
+          removed from the catalog and from the <b>My Cards</b> page. <br />
         </>
       }
     />

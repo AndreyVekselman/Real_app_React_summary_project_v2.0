@@ -41,11 +41,27 @@ const Card = ({
             </li>
           </ul>
           <div className="d-flex mt-2 fs-5">
-            <div className="me-auto p-2">
-              <Link to={`/mycards/update/${_id}`}>Edit</Link>
+            <div className="my-2 me-2">
+              <Link to={`/mycards/update/${_id}`}>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  style={{ width: "7.5rem" }}
+                >
+                  Edit
+                </button>
+              </Link>
             </div>
-            <div className=" my-2 ">
-              <Link to={`/mycards/delete/${_id}`}>Delete</Link>
+            <div className=" my-2  ">
+              <Link to={`/mycards/delete/${_id}`}>
+                <button
+                  type="button"
+                  className="btn btn-danger ms-1"
+                  style={{ width: "7.5rem" }}
+                >
+                  Delete
+                </button>
+              </Link>
             </div>
           </div>
         </div>

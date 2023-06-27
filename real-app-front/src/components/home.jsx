@@ -23,32 +23,28 @@ const Home = () => {
             Only registered business users <b> (SignUp Business) </b> can
             create, edit and delete business. <br />
             Here are few Examples how looks a bussines cards. <br />
-            <img
-              src="/real-app-front/public/Screenshot1.png"
-              className="rounded float-start"
-              alt="example-1"
-              style={{ width: "18rem" }}
-            />
+            <div className="row justify-content-center">
+              <img
+                src="img/Screenshot2.png "
+                className="rounded mx-auto d-block  my-3 mx-3"
+                alt="..."
+                style={{ width: "18rem" }}
+              />
+              <img
+                src="img/Screenshot1.png"
+                className="rounded mx-auto d-block  my-3 mx-3"
+                alt="..."
+                style={{ width: "18rem" }}
+              />
+              <img
+                src="img/Screenshot3.png "
+                className="rounded mx-auto d-block  my-3 mx-3"
+                alt="..."
+                style={{ width: "18rem" }}
+              />
+            </div>
           </>
         }
-      />
-      <img
-        src="../images/Screenshot1.png"
-        className="img-fluid"
-        alt="example-1"
-        style={{ width: "18rem" }}
-      />
-      <img
-        src="https://d3m9l0v76dty0.cloudfront.net/system/photos/788200/original/43a376b7e82c1b5e1050ac39fa24099b.jpg?1679401249"
-        className="rounded float-start"
-        alt="example-1"
-        style={{ width: "18rem" }}
-      />
-      <img
-        src="https://d3m9l0v76dty0.cloudfront.net/system/photos/788200/original/43a376b7e82c1b5e1050ac39fa24099b.jpg?1679401249"
-        className="rounded float-start"
-        alt="example-1"
-        style={{ width: "18rem" }}
       />
     </>
   );
